@@ -22,5 +22,5 @@ app.use('/animals', animalsRoute);
 app.use('/form-update-animal', animalUpdate);
 
 app.listen(PORT, () => {
-  console.log(`Этот сервер умирает на ${PORT} порту`);
+  console.log(`Этот сервер умирает на ${PORT} порту!`);
 });
