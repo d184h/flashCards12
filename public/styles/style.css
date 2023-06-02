@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(115, 66, 162);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px;
+}
+.ardsList {
+  display: flex;
+}

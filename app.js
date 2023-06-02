@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(ssr);
 
 app.use('/', mainRouter);
-app.use('/cards', cardsRouter)
+app.use('/cards', cardsRouter);
 
 app.listen(PORT, () => {
   console.log(`server ${PORT}`);

@@ -4,43 +4,49 @@ const Layout = require('./Layout');
 function Reg() {
   return (
     <Layout>
-      <form>
+      <form id='reg'>
         <div>
           <h1>Регистрация</h1>
         </div>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
+        <div className='mb-3'>
+          <label for='exampleInputEmail1' className='form-label'>
             Имя
           </label>
           <input
-            type="text"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
+            name='name'
+            type='text'
+            className='form-control'
+            required
+            id='exampleInputEmail1'
+            aria-describedby='emailHelp'
           />
         </div>
-        <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
+        <div className='mb-3'>
+          <label for='exampleInputPassword1' className='form-label'>
             Почта
           </label>
           <input
-            type="text"
-            className="form-control"
-            id="exampleInputPassword1"
+            name='email'
+            type='text'
+            className='form-control'
+            required
+            id='exampleInputPassword1'
           />
         </div>
-        <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
+        <div className='mb-3'>
+          <label for='exampleInputPassword1' className='form-label'>
             Пароль
           </label>
           <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
+            name='password'
+            type='password'
+            className='form-control'
+            required
+            id='exampleInputPassword1'
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          <a href="/cards">Зарегистрироваться</a>
+        <button type='submit' className='btn btn-primary'>
+          Зарегистрироваться
         </button>
       </form>
     </Layout>

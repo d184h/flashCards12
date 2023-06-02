@@ -6,8 +6,8 @@ router.get('/', async (req, res) => {
   try {
     const cards = await Card.findAll({ raw: true });
     res.send(res.renderComponent(CardsList, { title: 'Темы', cards }));
-  } catch ({ message }) {
-    res.json({ message });
+  } catch (error) {
+    res.json(error.message);
   }
 });
 
