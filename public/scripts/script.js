@@ -18,7 +18,7 @@ if (reg) {
     });
     const data = await res.json();
     if (data.message === 'success') {
-      window.location.href = '/cards';
+      window.location.assign('/cards');
     }
   });
 }

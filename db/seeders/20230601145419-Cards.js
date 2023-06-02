@@ -12,7 +12,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          name: 'Правда или ложь',
+          name: 'Угадай фильм по кадру',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
