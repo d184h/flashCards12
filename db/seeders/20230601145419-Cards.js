@@ -7,7 +7,12 @@ module.exports = {
       'Cards',
       [
         {
-          name: 'ФУТБОЛ',
+          name: 'Угадай песню по эмодзи',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: 'Угадай фильм по кадру',
           createdAt: new Date(),
           updatedAt: new Date(),
         },

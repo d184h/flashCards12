@@ -8,19 +8,17 @@ const app = express();
 
 const PORT = 3000;
 
-const mainRoute = require('./routes/main.routes');
+const mainRouter = require('./routes/main.routes');
+const cardsRouter = require('./routes/views/cards.routes');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(ssr);
-app.use(getUser);
 
-app.use('/', mainRoute);
-app.use('/users', usersRoute);
-app.use('/animals', animalsRoute);
-app.use('/form-update-animal', animalUpdate);
+app.use('/', mainRouter);
+app.use('/cards', cardsRouter);
 
 app.listen(PORT, () => {
-  console.log(`Этот сервер умирает на ${PORT} порту`);
+  console.log(`server ${PORT}`);
 });
