@@ -1,6 +1,6 @@
 const React = require('react');
 
-function CardItem({ card, question }) {
+function CardItem({ card, Quest }) {
   return (
     <div
       data-id={card.id}
@@ -8,7 +8,7 @@ function CardItem({ card, question }) {
       style={{ maxWidth: '18rem' }}
     >
       <button className="card-header">
-        <a href={`/cards/${card.id}/questions/${question.id}`}>{card.name}</a>
+        <a href={`/cards/${card.id}/questions/${card.Quest.id}`}>{card.name}</a>
       </button>
       {/* <div className='card-body'></div> */}
     </div>

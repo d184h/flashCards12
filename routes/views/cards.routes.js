@@ -8,15 +8,22 @@ router.get('/', async (req, res) => {
   try {
     const cards = await Card.findAll({ raw: true });
     res.send(res.renderComponent(CardsList, { title: 'Темы', cards }));
-  } catch (error) {
-    res.json(error.message);
+  } catch ({ message }) {
+    res.json({ message });
   }
 });
 
-router.get('/questions/:cardId', async (req, res) => {
+router.get('/:cardId/questions/:questionId', async (req, res) => {
   try {
     const { cardId } = req.params;
-    const question = Quest.findOne({ where: { id: cardId } });
+    const card = await Card.findOne({
+      where: { id: cardId },
+      include: { Quest },
+    });
+    const { questionId } = req.params;
+    const question = await Quest.findOne({
+      where: { id: questionId, cardId: cardId },
+    });
     res.send(res.renderComponent(QuestionItem, { title: 'Вопросы', question }));
   } catch ({ message }) {
     res.json({ message });
