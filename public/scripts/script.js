@@ -29,9 +29,3 @@ if (answerBtn) {
     document.querySelector('.hidden').classList.toggle('hidden');
   });
 }
-
-// if (nextBtn) {
-//   nextBtn.addEventListener('click', async (e) => {
-//     const 
-//   })
-// }

@@ -10,11 +10,8 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
   const { name, email, password } = req.body;
   if (name && email && password) {
-    const newUser = await User.create({
-      score: 0,
-      name,
-      email,
-      password,
+    const newUser = await User.findOrCreate({
+      where: { score: 0, name, email, password },
     });
   }
 
