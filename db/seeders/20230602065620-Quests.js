@@ -97,7 +97,7 @@ module.exports = {
         {
           question:
             'https://cdn2.myquiz.ru/userphotos/800/de5aa112-d656-4372-9af6-05ea1d798d52.jpg',
-          answer: 'Неадекватная любовь',
+          answer: 'Неадекватная люди',
           cardId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),

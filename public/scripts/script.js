@@ -1,4 +1,6 @@
 const reg = document.getElementById('reg');
+const answerBtn = document.querySelector('.btn-answer');
+const nextBtn = document.querySelector('.btn-next');
 
 if (reg) {
   reg.addEventListener('submit', async (e) => {
@@ -21,3 +23,15 @@ if (reg) {
     }
   });
 }
+
+if (answerBtn) {
+  answerBtn.addEventListener('click', (e) => {
+    document.querySelector('.hidden').classList.toggle('hidden');
+  });
+}
+
+// if (nextBtn) {
+//   nextBtn.addEventListener('click', async (e) => {
+//     const 
+//   })
+// }

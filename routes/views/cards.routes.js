@@ -18,7 +18,7 @@ router.get('/:cardId/questions/:questionId', async (req, res) => {
     const { cardId } = req.params;
     const card = await Card.findOne({
       where: { id: cardId },
-      include: { Quest },
+      include: { model: Quest },
     });
     const { questionId } = req.params;
     const question = await Quest.findOne({
@@ -29,5 +29,22 @@ router.get('/:cardId/questions/:questionId', async (req, res) => {
     res.json({ message });
   }
 });
+
+// router.get(`/:cardId/questions/:questionId`, async (req, res) => {
+//   try {
+//     const { cardId } = req.params;
+//     const card = await Card.findOne({
+//       where: { id: cardId },
+//       include: { model: Quest },
+//     });
+//     const { questionId } = req.params;
+//     const question = await Quest.findOne({
+//       where: { id: questionId, cardId: cardId },
+//     });
+//     res.send(res.renderComponent(QuestionItem, { title: 'Вопросы', question }));
+//   } catch ({ message }) {
+//     res.json({ message });
+//   }
+// });
 
 module.exports = router;

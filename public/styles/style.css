@@ -8,3 +8,15 @@ body {
 .ardsList {
   display: flex;
 }
+
+.card {
+  width: 833px !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* .visible {
+  visibility: visible;
+} */
