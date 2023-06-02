@@ -9,14 +9,15 @@ function QuestionItem({ question }) {
         <div className="card-body">
           <img src={question.question} className="card-title" Card title />
           <p className="hidden">Правильный ответ: {question.answer}</p>
-          <input type="text" placeholder="Ответ" />
-          <button className="btn btn-primary btn-answer">Ответить</button>
-          <button
-            className="btn btn-primary btn-next"
-            data-id={question.id + 1}
-          >
-            <a href={`${question.id + 1}`}>Далее</a>
-          </button>
+          <div className="div1">
+            <input type="text" placeholder="Ответ" />
+            <button className="btn btn-primary btn-answer">Ответить</button>
+            <button className="btn btn-primary btn-next">
+              <a className="link" href={`${question.id + 1}`}>
+                Далее
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </Layout>
